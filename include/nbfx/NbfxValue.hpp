@@ -37,6 +37,7 @@ namespace nbfx {
 			m_value = rho.m_value;
 			m_bytes = rho.m_bytes;
 			m_string = rho.m_string;
+			return *this;
 		}
 
 		NbfxValue&	operator = (NbfxValue&& rho) noexcept {
@@ -44,6 +45,7 @@ namespace nbfx {
 			m_value = rho.m_value;
 			std::swap(m_bytes, rho.m_bytes);
 			std::swap(m_string, rho.m_string);
+			return *this;
 		}
 
 
